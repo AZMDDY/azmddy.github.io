@@ -1,8 +1,12 @@
 GEM
   remote: https://gems.ruby-china.com/
   specs:
-    activesupport (3.1.12)
-      multi_json (~> 1.0)
+    activesupport (6.0.3.2)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 0.7, < 2)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+      zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     colorator (1.1.0)
@@ -64,7 +68,7 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
     mini_portile2 (2.4.0)
-    multi_json (1.15.0)
+    minitest (5.14.1)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     pathutil (0.16.2)
@@ -80,16 +84,19 @@ GEM
       ffi (~> 1.9)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
-    tzinfo (2.0.2)
-      concurrent-ruby (~> 1.0)
+    thread_safe (0.3.6)
+    tzinfo (1.2.7)
+      thread_safe (~> 0.1)
     tzinfo-data (1.2020.1)
       tzinfo (>= 1.0.0)
     unicode-display_width (1.7.0)
+    zeitwerk (2.4.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  activesupport (>= 4.1.11)
   jekyll-text-theme
   tzinfo-data
 
