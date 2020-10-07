@@ -12,8 +12,11 @@ Go语言中零值时变量没有做初始化的时候系统默认设定的值。
 |:--:|:--------:|
 |bool|false|
 |string|""|
+|byte|0|
+|rune|0|
 |int, int8, ...|0|
 |float32, float64|0.0|
+|complex64, complex128|0.0 + 0.0i|
 |*int|nil|
 |[]int|nil|
 |[5]int|[0, 0, 0, 0, 0]|
