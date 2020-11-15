@@ -1,7 +1,3 @@
----
-sort: 4
----
-
 # shell脚本中的set -e
 
 ```shell
