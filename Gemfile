@@ -1,8 +1,13 @@
 source "https://gems.ruby-china.com"
 
-# gem "jekyll-text-theme", path: "../"
-# gem "jekyll-text-theme"
-gem "tzinfo-data"
-gem "wdm", "~> 0.1.0" if Gem.win_platform?
-gem "activesupport", ">= 4.1.11"
-gem "jekyll-remote-theme"
+gem "jekyll-rtd-theme", "~> 2.0.10"
+
+group :jekyll_plugins do
+    gem "jekyll-default-layout"
+    gem "jekyll-readme-index"
+    gem "jekyll-github-metadata"
+    gem "jekyll-titles-from-headings"
+    gem "jemoji"
+    gem "jekyll-avatar"
+    gem "jekyll-mentions"
+  end
