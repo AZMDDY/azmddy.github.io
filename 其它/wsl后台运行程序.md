@@ -2,8 +2,6 @@
 
 > 在WSL终端中运行后台程序时，当所有WSL终端退出时，后台程序会被kill掉。
 
-<!-- more -->
-
 ```powershell
 powershell.exe -WindowStyle Hidden -c wsl # 后台运行一个wsl终端程序
 ```

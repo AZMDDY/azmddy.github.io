@@ -2,8 +2,6 @@
 
 > 在自己的服务器上实现Github Pages功能。
 
-<!-- more -->
-
 环境：ubuntu18.04，步骤如下：
 
 + 搭建Git服务器，参考：[搭建Git服务器]({% link _posts/2020-03-15-搭建Git服务器.md %})

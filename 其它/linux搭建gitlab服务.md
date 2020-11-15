@@ -2,8 +2,6 @@
 
 > 使用docker 搭建gitlab服务。
 
-<!-- more -->
-
 ```shell
 docker pull gitlab/gitlab-ce
 # docker pull ulm0/gitlab # 用于ARM

@@ -2,8 +2,6 @@
 
 > 在ubuntu18.04上搭建Git服务器。
 
-<!-- more -->
-
 ## 安装Git
 
 ```shell

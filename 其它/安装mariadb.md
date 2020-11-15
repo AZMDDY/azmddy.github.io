@@ -2,8 +2,6 @@
 
 > mariadb是mysql数据库的一个开源分支，与mysql有高度的兼容性，同时避免了mysql的闭源风险。
 
-<!-- more -->
-
 ```shell
  sudo apt-get update
  sudo apt-get upgrade
