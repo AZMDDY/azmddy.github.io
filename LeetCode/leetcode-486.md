@@ -1,0 +1,96 @@
+---
+sort: 3
+---
+
+# LeetCode —— 486. 预测赢家
+
+## 题目
+
+![](https://raw.githubusercontent.com/AZMDDY/imgs/master/20200901080435.png)
+
+## 思路
+
+由于每个玩家的决策都是自己的最优解，但玩家追求的不是当前最优(局部最优解)，而是结果最优(全局最优解)，所以不能用贪心算法。
+
+每个玩家都需要举一反三，也就是要从最后一步逆推，当前的决策是由上一步的结果决定的。使用`动态规划`解决此问题。
+
+逆推，玩家A做出决策选择了一个数后，玩家B就可以从剩下的数的两端选择，玩家B需要根据上一轮的结果选择最优方案。
+
+需要建立一个二维的dp数组，`dp[i][j]`表示玩家们从数组中取了从i到j的数，当前玩家和另一个玩家的分数之差的最大值。
+
+状态转移方程：$$dp[i][j] = max(nums[i] - dp[i+1][j], nums[j] - dp[i][j-1])$$
+
+当只剩下一个数时，即$$dp[i][i] = nums[i]$$
+
+最终$$dp[0][nums.size()-1]$$的值为最终结果，当值大于等于0，玩家1获胜。
+
+## 实现
+
+### C++
+
+```cpp
+class Solution {
+public:
+    bool PredictTheWinner(vector<int>& nums)
+    {
+        int len = nums.size();
+        if (len <= 1) {
+            return true;
+        }
+        vector<vector<int>> dp(len, vector<int>(len, 0));
+        for (int i = 0; i < len; i++) {
+            dp[i][i] = nums[i];
+        }
+
+        for (int right = 1; right < len; right++) {
+            for (int left = right - 1; left >= 0; left--) {
+                dp[left][right] = max(nums[right] - dp[left][right - 1], nums[left] - dp[left + 1][right]);
+            }
+        }
+        return dp[0][len - 1] >= 0;
+    }
+};
+```
+
+### Python
+
+```python
+class Solution:
+    def PredictTheWinner(self, nums: List[int]) -> bool:
+        length = len(nums)
+        if length <= 1:
+            return True
+        dp = [[0] * length for _ in range(length)]
+        for i, num in enumerate(nums):
+            dp[i][i] = num
+
+        for right in range(1, length):
+            for left in range(right - 1, -1, -1):
+                dp[left][right] = max(nums[left] - dp[left+1][right], nums[right] - dp[left][right-1])
+        return dp[0][length - 1] >= 0
+```
+
+### Go
+
+```go
+func max(x, y int) int {
+	if x > y {
+		return x
+	}
+	return y
+}
+func PredictTheWinner(nums []int) bool {
+	length := len(nums)
+	dp := make([][]int, length)
+	for i := 0; i < length; i++ {
+		dp[i] = make([]int, length)
+		dp[i][i] = nums[i]
+	}
+	for right := 1; right < length; right++ {
+		for left := (right - 1); left >= 0; left-- {
+			dp[left][right] = max(nums[left]-dp[left+1][right], nums[right]-dp[left][right-1])
+		}
+	}
+	return dp[0][length-1] >= 0
+}
+```

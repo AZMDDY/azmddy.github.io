@@ -2,6 +2,6 @@
 sort: 1
 ---
 
-# C++
+# LeetCode
 
 {% include list.liquid %}
