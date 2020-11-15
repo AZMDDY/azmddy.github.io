@@ -3,14 +3,14 @@ lang: en
 description: Look the world on the code.
 
 ## local method ##
-theme: jekyll-rtd-theme
-debug:
-  compress: false
-  dist: true
-  shortcodes: true
+# theme: jekyll-rtd-theme
+# debug:
+#   compress: false
+#   dist: true
+#   shortcodes: true
 
 ## remote method ##
-# remote_theme: rundocs/jekyll-rtd-theme
+remote_theme: rundocs/jekyll-rtd-theme
 
 readme_index:
   with_frontmatter: true
