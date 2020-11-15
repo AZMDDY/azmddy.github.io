@@ -15,13 +15,6 @@ remote_theme: rundocs/jekyll-rtd-theme
 readme_index:
   with_frontmatter: true
 
-kramdown:
-  math_engine: mathjax
-  syntax_highlighter: rouge
-
-markdown    : kramdown
-highlighter : rouge
-
 exclude:
   - Gemfile
   - Gemfile.lock
