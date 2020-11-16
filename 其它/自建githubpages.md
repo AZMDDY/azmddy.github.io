@@ -4,7 +4,7 @@
 
 环境：ubuntu18.04，步骤如下：
 
-+ 搭建Git服务器，参考：[搭建Git服务器]({% link _posts/2020-03-15-搭建Git服务器.md %})
++ 搭建Git服务器，参考：[搭建Git服务器](https://azmddy.github.io/%E5%85%B6%E5%AE%83/%E6%90%AD%E5%BB%BAGit%E6%9C%8D%E5%8A%A1%E5%99%A8.html)
 + 配置nginx;
 + 关键配置;
 
