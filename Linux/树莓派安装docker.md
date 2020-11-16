@@ -2,7 +2,6 @@
 
 > 脚本安装docker
 
-
 ```shell
 # 树莓派官方系统(arm64)
 curl -sSL https://get.docker.com | sh
