@@ -1,6 +1,6 @@
 # 树莓派4 Ubuntu20.4设置静态IP
 
-> 树莓派4安装Ubuntu20.4后，设置静态IP。
+树莓派4安装Ubuntu20.4后，设置静态IP。
 
 在Ubuntu20.4中需要用`NetPlan`去管理配置网络。
 

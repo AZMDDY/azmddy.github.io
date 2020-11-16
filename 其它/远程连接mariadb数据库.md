@@ -1,6 +1,6 @@
 # 远程连接mariadb数据库
 
-> mariadb是mysql数据库的一个开源分支，与mysql有高度的兼容性，同时避免了mysql的闭源风险。
+mariadb是mysql数据库的一个开源分支，与mysql有高度的兼容性，同时避免了mysql的闭源风险。
 
 ```shell
 # 登录数据库

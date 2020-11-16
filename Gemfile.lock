@@ -257,14 +257,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  jekyll-avatar
-  jekyll-default-layout
-  jekyll-github-metadata
-  jekyll-mentions
-  jekyll-readme-index
-  jekyll-rtd-theme (~> 2.0.10)
-  jekyll-titles-from-headings
-  jemoji
+  github-pages
+  jekyll-rtd-theme
 
 BUNDLED WITH
    2.1.4

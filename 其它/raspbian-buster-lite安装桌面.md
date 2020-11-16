@@ -1,6 +1,6 @@
 # Raspbian Buster Lite安装桌面
 
-> 在Raspbian Buster Lite上安装PIXEL桌面。
+在Raspbian Buster Lite上安装PIXEL桌面。
 
 安装以下软件包，重启，通过win10的远程桌面连接，可以连接树莓派的桌面。
 

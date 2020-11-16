@@ -1,6 +1,6 @@
 # 树莓派安装docker
 
-> 脚本安装docker
+脚本安装docker
 
 ```shell
 # 树莓派官方系统(arm64)

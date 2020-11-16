@@ -1,6 +1,6 @@
 # 自建Github Pages
 
-> 在自己的服务器上实现Github Pages功能。
+在自己的服务器上实现Github Pages功能。
 
 环境：ubuntu18.04，步骤如下：
 

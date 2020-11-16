@@ -1,6 +1,6 @@
 # 搭建Git服务器
 
-> 在ubuntu18.04上搭建Git服务器。
+在ubuntu18.04上搭建Git服务器。
 
 ## 安装Git
 
