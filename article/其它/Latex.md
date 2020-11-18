@@ -1,4 +1,4 @@
-# Latex符合大全
+# Latex符号大全
 
 $$LATEX 数学符号$$
 
