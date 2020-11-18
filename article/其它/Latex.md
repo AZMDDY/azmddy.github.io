@@ -7,8 +7,8 @@ $$LATEX 数学符号$$
 |Latex符号|希腊字母||Latex符号|希腊字母||Latex符号|希腊字母|
 |--------|--------|-|---|-----------|-|---|-----------|
 |\alpha|$\alpha$||\kappa|$\kappa$||\psi|$\psi$|
-|\Alpha|$\Alpha$||\lambda|$\lambda$||\rho|$\rho$|
-|\beta|$\beta$||\mu|$\mu$||\sigma|$\sigma$|
+|\beta|$\beta$||\lambda|$\lambda$||\rho|$\rho$|
+|\chi|$\chi$||\mu|$\mu$||\sigma|$\sigma$|
 |\delta|$\delta$||\nu|$\nu$||\tau|$\tau$|
 |\epsilon|$\epsilon$||o|$o$||\theta|$\theta$|
 |\eta|$\eta$||omega|$\omega$||\upsilon|$\upsilon$|
