@@ -1,7 +1,5 @@
 ---
-sort: 9
+sort: 7
 ---
-
-# 其它
 
 {% include list.liquid %}
