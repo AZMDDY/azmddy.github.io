@@ -2,4 +2,6 @@
 sort: 7
 ---
 
-{% include list.liquid %}
+# 编译构建
+
+{% include list.liquid all=true %}
