@@ -9,3 +9,4 @@
 |duplicate|重复|
 |panel|面板|
 |diagrams|图表|
+|navigate|导航|

@@ -16,13 +16,13 @@
 
 cmake简单示例：
 
-程序结构：
+项目结构：
 
 ```text
 demo
 ​ ├── build
 ​ ├── CMakeLists.txt
-​ └── main.c
+​ └── main.cpp
 ```
 
 ```CMakeLists.txt
@@ -35,10 +35,19 @@ project(demo VERSION 0.1.0)
 add_executable(demo main.cpp)
 ```
 
-构建：
+在CMake代码中命令是不区分大小写的，`add_executable`、`ADD_EXECUTABLE`和`ADD_executable`都是可以的，一般情况下都使用小写命令。
+
+创建一个构建目录`build`，进入到构建目录之后，运行CMake来配置项目并生成本地构建系统：
 
 ```bash
 cd build
 cmake ..
-make
 ```
+
+然后使用该构建系统来进行编译或链接项目：
+
+```bash
+cmake --build .
+```
+
+最后，可以通过`./demo`来运行程序。
