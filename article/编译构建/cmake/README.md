@@ -1,3 +1,3 @@
 # CMake食用指北
 
-{% include list.liquid %}
+source: {{ page.path }}
