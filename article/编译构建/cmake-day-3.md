@@ -44,6 +44,7 @@ add_library(add SHARED add.cpp)
 
 ## add_executable
 
+语法：
 ```text
 add_executable(<name> [WIN32] [MACOSX_BUNDLE]
                [EXCLUDE_FROM_ALL]
@@ -61,6 +62,7 @@ add_executable(<name> [WIN32] [MACOSX_BUNDLE]
 
 ## add_library
 
+语法：
 ```text
 add_library(<name> [STATIC | SHARED | MODULE]
             [EXCLUDE_FROM_ALL]
