@@ -26,11 +26,11 @@ target_include_directories(<target> [SYSTEM] [BEFORE]
 
 `<target>`:是add_executable()或者add_library()创建的目标；
 
-`PRIVATE`: 私有，指这里引用的头文件仅仅被这个目标使用，目标不会对外暴露引用的头文件；
+`PRIVATE`: 私有，指这里引用的头文件路径仅仅被这个目标使用，目标不会对外暴露引用的头文件路径；
 
-`PUBLIC`: 公有，指这里引用的头文件不仅被这个目标使用，目标还会对外暴露引用的头文件;
+`PUBLIC`: 公有，指这里引用的头文件路径不仅被这个目标使用，目标还会对外暴露引用的头文件路径;
 
-`INTERFACE`:接口，指这里引用的头文件不仅被这个目标使用，但目标会对外暴露引用的头文件;
+`INTERFACE`:接口，指这里引用的头文件路径不仅被这个目标使用，但目标会对外暴露引用的头文件路径;
 
 
 我们可以通过`INCLUDE_DIRECTORIES`(PUBLIC, PRIVATE)和`INTERFACE_INCLUDE_DIRECTORIES`(PUBLIC, INTERFACE)属性查看添加的头文件搜索路径。
@@ -83,11 +83,11 @@ target_link_directories(<target> [BEFORE]
 
 `link_directories`是全局的，`target_link_directories`是针对某个二进制文件的，能够更好的控制访问的粒度。
 
-`PRIVATE`: 私有，指这里引用的库文件仅仅被这个目标使用，目标不会对外暴露引用的库文件；
+`PRIVATE`: 私有，指这里引用的库文件路径仅仅被这个目标使用，目标不会对外暴露引用的库文件路径；
 
-`PUBLIC`: 公有，指这里引用的库文件不仅被这个目标使用，目标还会对外暴露引用的库文件;
+`PUBLIC`: 公有，指这里引用的库文件路径不仅被这个目标使用，目标还会对外暴露引用的库文件路径;
 
-`INTERFACE`:接口，指这里引用的库文件不被这个目标使用，但目标会对外暴露引用的库文件;
+`INTERFACE`:接口，指这里引用的库文件路径不被这个目标使用，但目标会对外暴露引用的库文件路径;
 
 ```text
 target_link_libraries(<target>
