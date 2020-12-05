@@ -18,11 +18,11 @@ target_include_directories(<target> [SYSTEM] [BEFORE]
 `include_directories`是全局包含的，项目中所有子目录都能够引用。
 `target_include_directories`是针对某个二进制文件的，能够更好的控制访问的粒度。
 
-`AFTER`:表示指定目录会附加到当前目录列表之后，默认是`AFTER`；
++ `AFTER`:表示指定目录会附加到当前目录列表之后，默认是`AFTER`；
++ `BEFORE`:表示指定目录会添加到当前目录列表之前；
++ `SYSTEM`:表示指定目录是系统包含目录；
 
-`BEFORE`:表示指定目录会添加到当前目录之前；
-
-`SYSTEM`:表示指定目录是系统包含目录；
+这里要指出一点：**最新被包含的头文件路径是根路径**，即`#include "xx.h"`是相对于这个根路径的。
 
 `<target>`:是add_executable()或者add_library()创建的目标；
 
