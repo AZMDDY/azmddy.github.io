@@ -22,7 +22,7 @@ target_include_directories(<target> [SYSTEM] [BEFORE]
 + `BEFORE`:表示指定目录会添加到当前目录列表之前；
 + `SYSTEM`:表示指定目录是系统包含目录；
 
-这里要指出一点：**最新被包含的头文件路径是根路径**，即`#include "xx.h"`是相对于这个根路径的。
+这里要指出一点：**最新被包含的头文件路径是根路径(root_dir)**，`#include "xx.h"`是相对于这个根路径的，相当于`#include "root_dir/xx.h"`。
 
 `<target>`:是add_executable()或者add_library()创建的目标；
 
