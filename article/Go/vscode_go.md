@@ -83,14 +83,14 @@ setting.json
 
 ## go modules
 
-1. 开启go modules 功能
+1.开启go modules 功能
 
 ```Bash
 go env -w GO111MODULE=auto
 # auto 则会根据当前目录下是否有 go.mod 文件来判断是否使用 modules 功能， off和on分别时关闭和开启。
 ```
 
-2. 初始化module
+2.初始化module
 
 ```Bash
 # 进入项目src目录
@@ -102,7 +102,7 @@ go mode init godemo
 ![](https://raw.githubusercontent.com/AZMDDY/imgs/master/20201216215625.png)
 
 
-3. 检查依赖
+3.检查依赖
 
 例如，项目中使用了echo库。
 
@@ -112,13 +112,13 @@ go mode init godemo
 
 ![](https://raw.githubusercontent.com/AZMDDY/imgs/master/20201216215740.png)
 
-4. 下载依赖
+4.下载依赖
 
 ```Bash
 go mod download
 ```
 
-5. 导入依赖
+5.导入依赖
 
 ```Bash
 go mod vendor
