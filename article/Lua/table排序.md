@@ -11,6 +11,7 @@ table中不应该有`nil`，否则会执行错误。
 示例：
 
 ```lua
+{% raw %}
 local stduent = {{name="Json", age=12}, {name="Tom", age=10}, {name="Jack", age=11}}
 
 table.sort(stduent, function(a, b)
@@ -20,4 +21,5 @@ end)
 for _, person in pairs(stduent) do
     print(string.format("name: %s, age: %d", person.name, person.age))
 end
+{% endraw %}
 ```
