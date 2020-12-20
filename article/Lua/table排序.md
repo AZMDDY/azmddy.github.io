@@ -10,7 +10,7 @@ table中不应该有`nil`，否则会执行错误。
 
 示例：
 
-```Lua
+```lua
 local stduent = {{name="Json", age=12}, {name="Tom", age=10}, {name="Jack", age=11}}
 
 table.sort(stduent, function(a, b)
