@@ -1,7 +1,7 @@
 ---
-sort: 10
+sort: 5
 ---
 
-# 其它
+# Lua
 
 {% include list.liquid %}
