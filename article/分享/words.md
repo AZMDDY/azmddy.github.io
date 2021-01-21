@@ -10,3 +10,5 @@
 |panel|面板|
 |diagrams|图表|
 |navigate|导航|
+|as above|如上|
+|property|属性|
