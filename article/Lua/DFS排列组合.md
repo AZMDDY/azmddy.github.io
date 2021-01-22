@@ -3,6 +3,7 @@
 从n堆书中，各取一本，共有多少种组合，输出所有组合。
 
 ```Lua
+{% raw %}
 function deepcopy(orig)
     local orig_type = type(orig)
     local copy
@@ -37,5 +38,5 @@ function compose(books)
     dfs(books, #books, {}, result)
     return result
 end
-
+{% endraw %}
 ```
