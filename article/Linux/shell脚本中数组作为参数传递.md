@@ -16,9 +16,9 @@ function GetStr() {
     done
 }
 
-GetStr1 "${arr_1[@]}"
-GetStr1 "${arr_2[@]}"
-GetStr1 "${arr_3[@]}"
+GetStr "${arr_1[@]}"
+GetStr "${arr_2[@]}"
+GetStr "${arr_3[@]}"
 ```
 
 结果如下：
