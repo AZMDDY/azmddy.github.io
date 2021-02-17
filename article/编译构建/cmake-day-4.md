@@ -30,7 +30,7 @@ target_include_directories(<target> [SYSTEM] [BEFORE]
 
 `PUBLIC`: 公有，指这里引用的头文件路径不仅被这个目标使用，目标还会对外暴露引用的头文件路径;
 
-`INTERFACE`:接口，指这里引用的头文件路径不仅被这个目标使用，但目标会对外暴露引用的头文件路径;
+`INTERFACE`:接口，指这里引用的头文件路径不被这个目标使用，但目标会对外暴露引用的头文件路径;
 
 
 我们可以通过`INCLUDE_DIRECTORIES`(PUBLIC, PRIVATE)和`INTERFACE_INCLUDE_DIRECTORIES`(PUBLIC, INTERFACE)属性查看添加的头文件搜索路径。
