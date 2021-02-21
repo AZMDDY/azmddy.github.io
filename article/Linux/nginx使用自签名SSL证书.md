@@ -92,3 +92,10 @@ server {
 	}
 }
 ```
+
+重启nginx服务
+
+```bash
+service nginx restart
+```
+
