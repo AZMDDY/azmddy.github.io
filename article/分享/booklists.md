@@ -7,6 +7,8 @@
 + 《Effective C++》
 + 《Effective STL》
 + 《More Effective C++》
++ 《Effective modern C++》
++ 《C++并发编程》
 + 《C++并发编程实战》
 + 《C++设计新思维 泛型编程与设计模式之应用》
 + 《深度探索C++对象模型》
@@ -42,3 +44,8 @@
 + 《Linux内核设计与实现》
 + 《鸟哥的Linux私房菜》
 + 《高级Bash脚本编程指南》
+
+## 其他
+
++ 《未来三十年》
++ 《中国的当下与未来》
