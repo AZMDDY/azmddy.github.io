@@ -12,6 +12,8 @@ description: Look the world on the code.
 ## remote method ##
 remote_theme: AZMDDY/jekyll-rtd-theme
 
+author: Zhi Bing Zheng
+
 readme_index:
   with_frontmatter: true
 
