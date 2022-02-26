@@ -26,10 +26,10 @@ google:
   gtag: GTM-KJPXLBS
   adsense: ca-pub-8787503616403816
 
-
 exclude:
   - Gemfile
   - Gemfile.lock
+
 
 plugins:
   - jekyll-default-layout
