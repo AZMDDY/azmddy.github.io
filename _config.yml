@@ -23,7 +23,8 @@ kramdown:
   syntax_highlighter: rouge
 
 google:
-  gtag: GTM-KJPXLBS
+  gtm: GTM-NBRVMCF
+  gtag: UA-176144300-1
   adsense: ca-pub-8787503616403816
 
 exclude:
