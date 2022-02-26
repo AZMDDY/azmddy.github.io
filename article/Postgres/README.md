@@ -1,3 +1,0 @@
-# Postgres
-
-{% include list.liquid %}

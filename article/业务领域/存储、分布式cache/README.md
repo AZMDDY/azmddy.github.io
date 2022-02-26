@@ -1,7 +1,6 @@
 ---
-sort: 1
+sort: 2
 ---
-
-# Bing's Blog
+# 存储、分布式cache
 
 {% include list.liquid all=true %}

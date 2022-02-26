@@ -2,6 +2,6 @@
 sort: 1
 ---
 
-# Bing's Blog
+# 通用领域
 
 {% include list.liquid all=true %}

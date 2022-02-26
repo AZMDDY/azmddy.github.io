@@ -1,7 +1,6 @@
 ---
-sort: 1
+sort: 4
 ---
-
-# Bing's Blog
+# 重构
 
 {% include list.liquid all=true %}

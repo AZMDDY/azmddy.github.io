@@ -1,7 +1,6 @@
 ---
-sort: 1
+sort: 5
 ---
-
-# Bing's Blog
+# 代码安全检查
 
 {% include list.liquid all=true %}

@@ -1,7 +1,6 @@
 ---
-sort: 1
+sort: 2
 ---
-
-# Bing's Blog
+# 业务领域
 
 {% include list.liquid all=true %}

@@ -2,6 +2,6 @@
 sort: 1
 ---
 
-# Bing's Blog
+# 架构设计
 
 {% include list.liquid all=true %}

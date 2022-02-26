@@ -1,7 +1,6 @@
 ---
-sort: 1
+sort: 8
 ---
-
-# Bing's Blog
+# 开发者测试设计
 
 {% include list.liquid all=true %}

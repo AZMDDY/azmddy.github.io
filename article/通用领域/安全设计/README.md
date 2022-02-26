@@ -1,7 +1,6 @@
 ---
-sort: 1
+sort: 2
 ---
-
-# Bing's Blog
+# 安全设计
 
 {% include list.liquid all=true %}

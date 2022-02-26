@@ -1,7 +1,6 @@
 ---
-sort: 1
+sort: 3
 ---
-
-# Bing's Blog
+# IDE及工具
 
 {% include list.liquid all=true %}

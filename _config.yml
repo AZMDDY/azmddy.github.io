@@ -1,37 +1,41 @@
 title: Bing's Blog
-lang: en
+lang: zh
 description: Look the world on the code.
 
+repository: AZMDDY/azmddy.github.io
 ## local method ##
 # theme: jekyll-rtd-theme
+
+## remote method ##
+remote_theme: AZMDDY/jekyll-rtd-theme
+
 # debug:
 #   compress: false
 #   dist: true
 #   shortcodes: true
 
-
-## remote method ##
-remote_theme: AZMDDY/jekyll-rtd-theme
-
 author: Zhi Bing Zheng
-
-readme_index:
-  with_frontmatter: true
-
-markdown: kramdown
-highlighter: rouge
-kramdown:
-  syntax_highlighter: rouge
 
 google:
   gtm: GTM-NBRVMCF
   gtag: UA-176144300-1
   adsense: ca-pub-8787503616403816
 
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  syntax_highlighter: rouge
+
+# sort
+readme_index:
+  with_frontmatter: true
+
 exclude:
   - Gemfile
   - Gemfile.lock
-
+  - Makefile
+  - CNAME
+  - LICENSE
 
 plugins:
   - jekyll-default-layout

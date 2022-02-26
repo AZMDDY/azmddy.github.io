@@ -1,7 +1,7 @@
 ---
-sort: 1
+sort: 6
 ---
 
-# Bing's Blog
+# 算法与数据结构
 
 {% include list.liquid all=true %}

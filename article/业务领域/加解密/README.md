@@ -1,7 +1,6 @@
 ---
-sort: 1
+sort: 3
 ---
-
-# Bing's Blog
+# 加解密
 
 {% include list.liquid all=true %}

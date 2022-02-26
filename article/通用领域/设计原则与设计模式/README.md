@@ -1,7 +1,6 @@
 ---
-sort: 1
+sort: 3
 ---
-
-# Bing's Blog
+# 设计原则与设计模式
 
 {% include list.liquid all=true %}

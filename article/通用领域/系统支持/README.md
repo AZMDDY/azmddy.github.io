@@ -1,7 +1,6 @@
 ---
-sort: 1
+sort: 7
 ---
-
-# Bing's Blog
+# 系统支持
 
 {% include list.liquid all=true %}

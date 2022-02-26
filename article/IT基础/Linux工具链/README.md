@@ -1,7 +1,6 @@
 ---
 sort: 1
 ---
-
-# Bing's Blog
+# Linux工具链
 
 {% include list.liquid all=true %}

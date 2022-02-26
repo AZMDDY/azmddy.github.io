@@ -2,6 +2,6 @@
 sort: 1
 ---
 
-# Bing's Blog
+# CMake
 
 {% include list.liquid all=true %}
