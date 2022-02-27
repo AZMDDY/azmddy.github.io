@@ -8,7 +8,7 @@ A*（念做：A Star）算法是一种很常用的路径查找和图形遍历算
 
 `Dijkstra`算法是从起点开始，扩散式的将周围的点都加入到待检查集中（将待检查集中的点附近的点都加入待检查集，重复此过程），直到达到终点。
 
-![](https://raw.githubusercontent.com/AZMDDY/imgs/master/20201021081545.png)
+![](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/20201021081545.png)
 
 ## 最佳优先搜索（BFS）
 
@@ -29,6 +29,6 @@ A*（念做：A Star）算法是一种很常用的路径查找和图形遍历算
 
 C++的仅头文件实现。
 
-![](https://raw.githubusercontent.com/AZMDDY/imgs/master/tutieshi_640x288_16s.gif)
+![](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/tutieshi_640x288_16s.gif)
 
 获取地址：[https://github.com/AZMDDY/astar](https://github.com/AZMDDY/astar)

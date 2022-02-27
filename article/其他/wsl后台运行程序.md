@@ -8,4 +8,4 @@ powershell.exe -WindowStyle Hidden -c wsl # 后台运行一个wsl终端程序
 
 启动一个任务，开机运行上述命令。
 
-![image-20200424201923540](https://raw.githubusercontent.com/AZMDDY/imgs/master/image-20200424201923540.png)
+![image-20200424201923540](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/image-20200424201923540.png)

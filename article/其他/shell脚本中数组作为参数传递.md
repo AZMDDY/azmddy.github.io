@@ -23,7 +23,7 @@ GetStr "${arr_3[@]}"
 
 结果如下：
 
-![](https://raw.githubusercontent.com/AZMDDY/imgs/master/20201223213502.png)
+![](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/20201223213502.png)
 
 PS:
 

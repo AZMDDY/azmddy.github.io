@@ -39,7 +39,7 @@ int main(int argc, char **argv) {
 }
 ```
 
-![image_1d1vb501m315143k1j9eavfsp419.png-41kB](https://raw.githubusercontent.com/AZMDDY/imgs/master/img/image_1d1vb501m315143k1j9eavfsp419.png)
+![image_1d1vb501m315143k1j9eavfsp419.png-41kB](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/img/image_1d1vb501m315143k1j9eavfsp419.png)
 
 ## 设置
 
@@ -147,7 +147,7 @@ int main(int argc, char **argv) {
 
 当程序出现崩溃时，GLog也可以提供Bug定位支持。通过`google::InstallFailureSignalHandler()`安装信号处理程序，当程序出现崩溃时，会输出崩溃的位置等相关信息。
 
-![image_1d1vg3l7h170r187n9c21lh5b1n1m.png-53.7kB](https://raw.githubusercontent.com/AZMDDY/imgs/master/img/image_1d1vg3l7h170r187n9c21lh5b1n1m.png)
+![image_1d1vg3l7h170r187n9c21lh5b1n1m.png-53.7kB](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/img/image_1d1vg3l7h170r187n9c21lh5b1n1m.png)
 
 按照箭头的方向去看崩溃的信息所在位置，GLog会一层一层的输出相关信息；
 

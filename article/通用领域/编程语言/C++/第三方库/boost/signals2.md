@@ -89,7 +89,7 @@ int main() {
 
 结果如下：
 
-![](https://raw.githubusercontent.com/AZMDDY/imgs/master/img/image_1d1t1c8jr1qt91vup1j40quh1cggp.png)
+![](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/img/image_1d1t1c8jr1qt91vup1j40quh1cggp.png)
 
 ### 带参数的槽函数
 
@@ -126,7 +126,7 @@ int main() {
 
 结果如下：
 
-![image_1d1t252qt1bec1md11vrb112611m71m.png-55.5kB](https://raw.githubusercontent.com/AZMDDY/imgs/master/img/image_1d1t252qt1bec1md11vrb112611m71m.png )
+![image_1d1t252qt1bec1md11vrb112611m71m.png-55.5kB](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/img/image_1d1t252qt1bec1md11vrb112611m71m.png )
 
 ### 合并器
 

@@ -123,10 +123,10 @@ server {
 
 + 遇到通过域名无法访问私有云时，需要修改`config/config.php`文件中的`trusted_domains`（/home/volume/hcloud/config/config.php）将域名加入其中。
 
-![image-20210221173535654](https://raw.githubusercontent.com/AZMDDY/imgs/master/img/image-20210221173535654.png)
+![image-20210221173535654](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/img/image-20210221173535654.png)
 
 ## 效果
 
-![image-20210221173711028](https://raw.githubusercontent.com/AZMDDY/imgs/master/img/image-20210221173711028.png)
+![image-20210221173711028](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/img/image-20210221173711028.png)
 
-![image-20210221173907048](https://raw.githubusercontent.com/AZMDDY/imgs/master/img/image-20210221173907048.png)
+![image-20210221173907048](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/img/image-20210221173907048.png)
