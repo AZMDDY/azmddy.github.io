@@ -16,6 +16,9 @@ remote_theme: AZMDDY/jekyll-rtd-theme
 
 author: Zhi Bing Zheng
 
+baidu:
+  sitecode: code-TiBt09JO1U
+
 google:
   gtm: GTM-NBRVMCF
   gtag: UA-176144300-1
