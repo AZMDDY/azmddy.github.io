@@ -2,6 +2,6 @@
 sort: 1
 ---
 
-# ZhiBing's Blog
+# Git
 
 {% include list.liquid all=true %}

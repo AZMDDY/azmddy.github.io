@@ -1,4 +1,4 @@
-# Bing's Blog
+# ZhiBing's Blog
 
 <span class="iconfont icon-didian"> ShenZhen, China</span>
 <a href="https://azmddy.github.io">
