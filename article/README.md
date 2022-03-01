@@ -2,6 +2,6 @@
 sort: 1
 ---
 
-# ZhiBing's Blog
+# 目录
 
 {% include list.liquid all=true %}
