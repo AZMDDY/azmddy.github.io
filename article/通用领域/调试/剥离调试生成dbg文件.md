@@ -38,3 +38,4 @@ objcopy --add-gnu-debuglink main.dbg main
 
 
 更多关于`objcopy`的信息可以查阅[objcopy (GNU Binary Utilities) (sourceware.org)](https://sourceware.org/binutils/docs/binutils/objcopy.html)
+
