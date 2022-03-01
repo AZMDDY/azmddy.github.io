@@ -1,8 +1,8 @@
 ---
-sort: 9
+sort: 1
 ---
 
-# 调试
+# gdb
 
 {% include list.liquid all=true %}
 
