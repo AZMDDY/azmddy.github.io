@@ -1,12 +1,9 @@
 // iconfont
 @font-face {
-  font-family: "iconfont"; /* Project id 3207651 */
-  src: url("//at.alicdn.com/t/font_3207651_abfc3beitrm.woff2?t=1645933420958")
-      format("woff2"),
-    url("//at.alicdn.com/t/font_3207651_abfc3beitrm.woff?t=1645933420958")
-      format("woff"),
-    url("//at.alicdn.com/t/font_3207651_abfc3beitrm.ttf?t=1645933420958")
-      format("truetype");
+  font-family: 'iconfont';  /* Project id 3207651 */
+  src: url('//at.alicdn.com/t/font_3207651_8ygl2jzf2la.woff2?t=1646184461518') format('woff2'),
+       url('//at.alicdn.com/t/font_3207651_8ygl2jzf2la.woff?t=1646184461518') format('woff'),
+       url('//at.alicdn.com/t/font_3207651_8ygl2jzf2la.ttf?t=1646184461518') format('truetype');
 }
 
 .iconfont {
@@ -23,4 +20,8 @@
 
 .icon-didian:before {
   content: "\e61a";
+}
+
+.icon-csdn:before {
+  content: "\e638";
 }

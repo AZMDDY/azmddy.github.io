@@ -1,8 +1,11 @@
 # ZhiBing's Blog - 码上看世界
 
 <span class="iconfont icon-didian"> ShenZhen, China</span>
-<a href="https://azmddy.github.io">
+<a href="https://github.com/AZMDDY/azmddy.github.io">
 <span class="iconfont icon-github1"> AZMDDY</span>
+</a>
+<a href="https://blog.csdn.net/qq_34347375">
+<span class="iconfont icon-csdn">码上看世界</span>
 </a>
 
 **笔尖记录成长，点滴汇聚力量！**
