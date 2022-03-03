@@ -20,6 +20,9 @@ google:
   gtm: GTM-NBRVMCF
   gtag: UA-176144300-1
   adsense: ca-pub-8787503616403816
+  adunit:
+    topslot: 9369693170
+    footerslot: 6973849724
 
 markdown: kramdown
 highlighter: rouge
