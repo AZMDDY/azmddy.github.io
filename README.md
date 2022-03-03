@@ -7,6 +7,9 @@
 <a href="https://blog.csdn.net/qq_34347375">
 <span class="iconfont icon-csdn">码上看世界</span>
 </a>
+<a href="mailto:azmddy.c@gmail.com">
+<span class="iconfont icon-youxiang">azmddy.c@gmail.com</span>
+</a>
 
 **笔尖记录成长，点滴汇聚力量！**
 
@@ -34,6 +37,7 @@
   + [构建](http://azmddy.top/article/IT%E5%9F%BA%E7%A1%80/%E6%9E%84%E5%BB%BA/)
   + [代码安全检查](http://azmddy.top/article/IT%E5%9F%BA%E7%A1%80/%E4%BB%A3%E7%A0%81%E5%AE%89%E5%85%A8%E6%A3%80%E6%9F%A5/)
 + [其他](http://azmddy.top/article/%E5%85%B6%E4%BB%96/)
++ [问题解决方案](http://azmddy.top/article/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/)
 ## 技能标签
 
 `Linux` - `C++` - `NetWork` - `Design Patterns` - `git` - `CMake` - `gdb` - `DT` - `docker` - `k8s`
