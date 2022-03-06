@@ -1,0 +1,41 @@
+# githubpage 自定义域名开启https
+
+> 在阿里云上购买域名，给自己的githubpage设置自定义域名，并开启https
+
+
+
+## 设置DNS解析
+
+
+
+添加`CNAME`和`A`这两个记录就可以。可以参考下图：
+
+![image-20220306093643133](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/img/image-20220306093643133.png)
+
+`A`记录类型需要填的记录值是`github page`的IP地址。可以`ping`自己的GitHub page。
+
+```shell
+ping azmddy.github.io
+```
+
+## github仓库添加域名解析记录
+
+在仓库的根目录创建`CNAME`文件，内容填写自己购买的域名：
+
+```shell
+touch CNAME
+echo 'azmddy.top' > CNAME
+```
+
+
+
+## 开启https
+
+打开github page项目的`Settings`:
+
+![image-20220306094257813](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/img/image-20220306094257813.png)
+
+等待DNS解析完成，没有问题后，可以勾选`Enforce HTTPS`，这样你的网站就可以通过https访问，不会报`不安全`。
+
+![image-20220306094444248](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/img/image-20220306094444248.png)
+
