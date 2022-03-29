@@ -10,7 +10,7 @@
     <div class="content p-3 p-sm-5">
         {% include templates/breadcrumbs.liquid %}
         <hr>
-        {%- include common/google_adsense_unit_top.liquid-%}
+        {%- include common/google_adsense_unit_top.liquid -%}
         <div role="main" itemscope="itemscope" itemtype="https://schema.org/Article">
             <div class="markdown-body" itemprop="articleBody">
                 {{ content }}
@@ -30,7 +30,8 @@
                 </div>
             </div>
         </div>
-        {%- include common/google_adsense_unit_footer.liquid-%}
+        {%- include common/google_adsense_unit_footer.liquid -%}
+        {%- include common/gitalk.liquid -%}
         {% include templates/footer.liquid %}
     </div>
 </div>
