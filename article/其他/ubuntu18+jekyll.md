@@ -1,6 +1,6 @@
-# ubuntu18.04 + jekyll搭建个人博客站
+# ubuntu18.04 + jekyll 搭建个人博客站
 
-本人日常使用markdown做笔记，为了方便的将自己的写的东西发布到网上，就采用`ubuntu18.04 + jekyll`的形式搭建个人博客站。在这里就说明如何购买云服务器和域名的方法了。谷哥和度娘是我们的好朋友！
+本人日常使用 markdown 做笔记，为了方便的将自己的写的东西发布到网上，就采用`ubuntu18.04 + jekyll`的形式搭建个人博客站。在这里就说明如何购买云服务器和域名的方法了。谷哥和度娘是我们的好朋友！
 
 ## 安装软件包
 
@@ -12,9 +12,7 @@ sudo apt-get nodejs ruby ruby-dev git
 sudo gem install jekyll bundler
 ```
 
-
-
-## jekyll启动
+## jekyll 启动
 
 ```shell
 jekyll new blog-site # 创建jekyll项目

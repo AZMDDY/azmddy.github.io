@@ -1,6 +1,6 @@
-# WSL后台运行程序
+# WSL 后台运行程序
 
-在WSL终端中运行后台程序时，当所有WSL终端退出时，后台程序会被kill掉。
+在 WSL 终端中运行后台程序时，当所有 WSL 终端退出时，后台程序会被 kill 掉。
 
 ```powershell
 powershell.exe -WindowStyle Hidden -c wsl # 后台运行一个wsl终端程序

@@ -1,14 +1,14 @@
-# 自建Github Pages
+# 自建 Github Pages
 
-在自己的服务器上实现Github Pages功能。
+在自己的服务器上实现 Github Pages 功能。
 
 环境：ubuntu18.04，步骤如下：
 
-+ 搭建Git服务器，参考：[搭建Git服务器](https://azmddy.github.io/%E5%85%B6%E5%AE%83/%E6%90%AD%E5%BB%BAGit%E6%9C%8D%E5%8A%A1%E5%99%A8.html)
-+ 配置nginx;
-+ 关键配置;
+- 搭建 Git 服务器，参考：[搭建 Git 服务器](https://azmddy.github.io/%E5%85%B6%E5%AE%83/%E6%90%AD%E5%BB%BAGit%E6%9C%8D%E5%8A%A1%E5%99%A8.html)
+- 配置 nginx;
+- 关键配置;
 
-## 配置nginx
+## 配置 nginx
 
 ```shell
 sudo apt-get update
@@ -74,8 +74,8 @@ sudo nginx -s reload
 
 ## 关键配置
 
-自建Github Pages要实现本地推送到服务器，服务器解析推送内容，网站更新。对于推送，通过前面将服务器搭建作为一个Git服务器，就能够做到。
-服务器解析推送内容，需要用到[Git钩子](https://azmddy.github.io/%E5%85%B6%E5%AE%83/git%E9%92%A9%E5%AD%90.html)这一功能实现，但有一些要注意的地方。
+自建 Github Pages 要实现本地推送到服务器，服务器解析推送内容，网站更新。对于推送，通过前面将服务器搭建作为一个 Git 服务器，就能够做到。
+服务器解析推送内容，需要用到[Git 钩子](https://azmddy.github.io/%E5%85%B6%E5%AE%83/git%E9%92%A9%E5%AD%90.html)这一功能实现，但有一些要注意的地方。
 
 首先需要修改`post-receive`这个钩子脚本。具体内容如下：
 
@@ -95,7 +95,7 @@ exit
 
 当从本地推送到远程仓库时，就会执行这个钩子脚本，但有一点很关键，执行这个脚本时，用户是`git`，那么就需要考虑**权限问题**。总的来说就是`git`用户读写的权限问题。
 
-首先**暂时**允许`git`用户能够shell登录，以便我们切换用户。
+首先**暂时**允许`git`用户能够 shell 登录，以便我们切换用户。
 
 ```shell
 sudo vim /etc/passwd
@@ -105,7 +105,7 @@ su git # 切换到git用户
 mkdir /home/git/tmp # 创建临时目录
 ```
 
-使用`git`用户去安装配置`jekyll`，但在安装之前，需要将git添加到sudo用户组中。
+使用`git`用户去安装配置`jekyll`，但在安装之前，需要将 git 添加到 sudo 用户组中。
 
 ```shell
 su root # 切换到root用户

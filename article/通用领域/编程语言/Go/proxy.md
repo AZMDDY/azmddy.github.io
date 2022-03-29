@@ -14,7 +14,7 @@ go env -w GOPROXY=https://goproxy.cn,direct
 go env -w GOPRIVATE=*.gitlab.com,*.gitee.com
 ```
 
-设置`GOSUMDB`提供sum验证服务，验证包的有效性。Go1.13默认的GOSUMDB=sum.golang.org，这个访问不了，可以改为以下内容:
+设置`GOSUMDB`提供 sum 验证服务，验证包的有效性。Go1.13 默认的 GOSUMDB=sum.golang.org，这个访问不了，可以改为以下内容:
 
 ```bash
 go env -w GOSUMDB="sum.golang.google.cn"

@@ -6,7 +6,4 @@ sort: 5
 
 > 各种问题解决方案
 
-
-
 {% include list.liquid all=true %}
-

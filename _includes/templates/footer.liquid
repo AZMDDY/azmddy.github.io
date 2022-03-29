@@ -1,0 +1,94 @@
+{% comment %} prev and next {% endcomment %}
+{%- if page.url != "/search.html" and page.url != "/404.html" -%}
+    {%- if next or prev -%}
+        <div class="navigation-bottom d-flex flex-justify-between py-3" role="navigation" aria-label="footer navigation">
+            <div class="prev">
+                {%- if prev -%}
+                    <a href="{{ prev.url | relative_url }}" class="btn" title="{{ prev.title }}" accesskey="p" rel="prev">
+                        <i class="fa fa-arrow-circle-left"></i> {{ __.previous | default: "Previous" }}
+                    </a>
+                {%- endif -%}
+            </div>
+            <div class="next">
+                {%- if next -%}
+                    <a href="{{ next.url | relative_url }}" class="btn" title="{{ next.title }}" accesskey="n" rel="next">
+                        {{ __.next | default: "Next" }} <i class="fa fa-arrow-circle-right"></i>
+                    </a>
+                {%- endif -%}
+            </div>
+        </div>
+    {%- endif -%}
+{%- endif -%}
+
+<hr>
+
+<div class="copyright text-center text-gray" role="contentinfo">
+    <i class="fa fa-copyright"></i>
+    <span class="time">
+        {%- assign created_time = rest_created_at | date: "%Y" -%}
+        {%- assign updated_time = rest_updated_at | date: "%Y" -%}
+        {%- if created_time == updated_time -%}
+            {{- created_time -}},
+        {%- else -%}
+            {{- created_time }}-{{ updated_time -}},
+        {%- endif -%}
+    </span>
+    <a class="text-gray" href="{{ docs.owner_url }}" rel="noreferrer" target="_blank">
+        {{- author -}}
+    </a>
+    {{ __.revision | default: "Revision" }}
+    <a class="text-gray" href="{{ docs.repository_url }}/commit/{{ docs.build_revision }}" title="{{ docs.build_revision }}" rel="noreferrer" target="_blank">
+        {{- docs.build_revision | slice: 0, 7 -}}
+    </a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span><span id="busuanzi_container_site_uv"> | 访客数<span id="busuanzi_value_site_uv"></span>人 | </span><span id="htmer_time"></span>
+</div>
+
+<!-- 计算网站运行时间 -->
+<span style="font-size:12px;"><script language=JavaScript> 
+ function secondToDate(second) {
+     if (!second) {
+        return 0;
+     }
+
+ var time = new Array(0, 0, 0, 0, 0);
+
+     if (second >= 365 * 24 * 3600) {
+     time[0] = parseInt(second / (365 * 24 * 3600));
+     second %= 365 * 24 * 3600;
+ }  
+     
+ if (second >= 24 * 3600) {
+     time[1] = parseInt(second / (24 * 3600));
+     second %= 24 * 3600;
+ }
+
+ if (second >= 3600) {
+     time[2] = parseInt(second / 3600);
+     second %= 3600;
+ }
+
+ if (second >= 60) {
+     time[3] = parseInt(second / 60);
+     second %= 60;
+ }
+
+ if (second > 0) {
+     time[4] = second;
+ }
+    return time;
+}
+</script>
+
+<!-- 动态显示网站运行时间 -->
+<script type="text/javascript" language="javascript">
+    function setTime() {
+        var create_time = Math.round(new Date(Date.UTC(2020, 08, 30, 0, 0, 0)).getTime() / 1000);
+        var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
+        currentTime = secondToDate((timestamp - create_time));
+        currentTimeHtml = '运行' + currentTime[0] + '年' +  currentTime[1] + '天' ;
+        document.getElementById("htmer_time").innerHTML = currentTimeHtml;
+    }
+    setInterval(setTime, 1000);
+</script></span>

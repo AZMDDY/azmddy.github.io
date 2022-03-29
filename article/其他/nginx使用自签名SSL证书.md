@@ -1,12 +1,12 @@
-# nginx使用自签名SSL证书
+# nginx 使用自签名 SSL 证书
 
-## 创建SSL证书
+## 创建 SSL 证书
 
 ```shell
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/your-selfsigned.key -out /etc/ssl/certs/your-selfsigned.crt
 ```
 
-## nginx 配置SSL
+## nginx 配置 SSL
 
 ```shell
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bk
@@ -93,9 +93,8 @@ server {
 }
 ```
 
-重启nginx服务
+重启 nginx 服务
 
 ```bash
 service nginx restart
 ```
-

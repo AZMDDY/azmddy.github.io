@@ -1,28 +1,28 @@
 # signals2
 
-> signals2 基于Boost里的另一个库signals，实现了线程安全的观察者模式。它是一种函数回调机制，当一个信号关联了多个槽时，信号发出，这些槽将会被调用。
+> signals2 基于 Boost 里的另一个库 signals，实现了线程安全的观察者模式。它是一种函数回调机制，当一个信号关联了多个槽时，信号发出，这些槽将会被调用。
 
-其实Qt也提供了它自己的**信号和槽机制**，那个是非常的灵活和好用的，但是它依赖于Qt的框架，所以退而求其次，选择了Boost提供了`signals2`;
+其实 Qt 也提供了它自己的**信号和槽机制**，那个是非常的灵活和好用的，但是它依赖于 Qt 的框架，所以退而求其次，选择了 Boost 提供了`signals2`;
 
-signals2库位于命名空间`boost::signals2`中，为了使用它，需要包含头文件`<boost/signals2.hpp>`;
+signals2 库位于命名空间`boost::signals2`中，为了使用它，需要包含头文件`<boost/signals2.hpp>`;
 
 ## 信号（Signal）
 
-signal是不可拷贝的，如果将signal作为类的成员变量，那么类将不能被拷贝，除非使用只能智能或者是引用间接的持有它；
+signal 是不可拷贝的，如果将 signal 作为类的成员变量，那么类将不能被拷贝，除非使用只能智能或者是引用间接的持有它；
 
-signal是一个模板类，它的定义如下：
+signal 是一个模板类，它的定义如下：
 
 ```cpp
-    template<typename Signature, 
-             typename Combiner = boost::signals2::optional_last_value<R>, 
-             typename Group = int, typename GroupCompare = std::less<Group>, 
-             typename SlotFunction = boost::function<Signature>, 
-             typename ExtendedSlotFunction = boost::function<R (const connection &, T1, T2, ..., TN)>, 
-             typename Mutex = boost::signals2::mutex> 
+    template<typename Signature,
+             typename Combiner = boost::signals2::optional_last_value<R>,
+             typename Group = int, typename GroupCompare = std::less<Group>,
+             typename SlotFunction = boost::function<Signature>,
+             typename ExtendedSlotFunction = boost::function<R (const connection &, T1, T2, ..., TN)>,
+             typename Mutex = boost::signals2::mutex>
       class signal;
 ```
 
-第一个模板参数`Signature`的含义和`function`相同，也是一个函数类型，表示signal调用的函数（槽，事件处理handler）,例如： 
+第一个模板参数`Signature`的含义和`function`相同，也是一个函数类型，表示 signal 调用的函数（槽，事件处理 handler）,例如：
 
 ```cpp
 signal<void(int, double)> sig;
@@ -30,7 +30,7 @@ signal<void(int, double)> sig;
 
 第二个模板参数`Combiner`是一个函数对象，它被称为‘合并器’，用于组合所有槽的返回值，默认是`boost::signals2::optional_last_value<R>`，返回最后一个被调用的槽的返回值；
 
-第三个模板参数`Group`是槽编组的类型，你可以为你的槽设置不同的组，默认组的类型是int，通常情况下，不需要更改；
+第三个模板参数`Group`是槽编组的类型，你可以为你的槽设置不同的组，默认组的类型是 int，通常情况下，不需要更改；
 
 <!--more>
 第四个模板参数`SlotFunction`是
@@ -39,13 +39,14 @@ signal<void(int, double)> sig;
 
 第六个模板参数`Mutex`是
 <!more-->
+
 ## 连接（connect）
 
 ```cpp
 connection connect(const group_type &group,const slot_type &slot, connect_position position = at_back)
 ```
 
-它作为signal的成员函数，具有三个参数，第一个参数表示这个槽所属的组，第二的参数表示信号触发哪个槽函数，而最后的参数，表示槽函数在响应队列中响应的位置，默认`at_back`表示这个槽函数出来队列的末尾，它将在其他槽函数之后被调用。
+它作为 signal 的成员函数，具有三个参数，第一个参数表示这个槽所属的组，第二的参数表示信号触发哪个槽函数，而最后的参数，表示槽函数在响应队列中响应的位置，默认`at_back`表示这个槽函数出来队列的末尾，它将在其他槽函数之后被调用。
 
 ## 实例
 
@@ -126,7 +127,7 @@ int main() {
 
 结果如下：
 
-![image_1d1t252qt1bec1md11vrb112611m71m.png-55.5kB](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/img/image_1d1t252qt1bec1md11vrb112611m71m.png )
+![image_1d1t252qt1bec1md11vrb112611m71m.png-55.5kB](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/img/image_1d1t252qt1bec1md11vrb112611m71m.png)
 
 ### 合并器
 
@@ -146,7 +147,7 @@ struct Combiner {
 };
 ```
 
-这是一个典型的合并器，它返回一个拥有所有槽的返回值的一个vector,我们可以随便定义合并器的返回类型，但要注意，一定要通过 `typedef your_type result_type`去注册一下你的返回值类型；
+这是一个典型的合并器，它返回一个拥有所有槽的返回值的一个 vector,我们可以随便定义合并器的返回类型，但要注意，一定要通过 `typedef your_type result_type`去注册一下你的返回值类型；
 
 具体的用法如下：
 
@@ -184,7 +185,7 @@ int main() {
     auto result = sig(1);
     for(const auto& i : result) {
         cout << i << endl;
-    }    
+    }
     return 0;
 }
 
@@ -214,7 +215,7 @@ c1.disconnect(); // 断开slot3的连接
 
 ### 临时连接
 
-Boost提供了一个临时的连接方式`scoped_connection`，也就是有作用域的连接；
+Boost 提供了一个临时的连接方式`scoped_connection`，也就是有作用域的连接；
 
 ```cpp
 // 以上省略了一些代码
@@ -228,7 +229,7 @@ cout << sig.num_slots() << endl;
 
 ### 阻塞连接
 
-Boost提供了一个`shared_connection_block`实现阻塞和解除阻塞连接的操作，当它被析构(离开作用域)或者被显式的调用`unblock()`就好解除阻塞；
+Boost 提供了一个`shared_connection_block`实现阻塞和解除阻塞连接的操作，当它被析构(离开作用域)或者被显式的调用`unblock()`就好解除阻塞；
 
 ```cpp
 // 以上省略一些代码
@@ -246,9 +247,10 @@ sig();
 
 ### 触发成员中的槽函数
 
-我们使用signal通常是为了实现类间的通信，实现观察者模式；
+我们使用 signal 通常是为了实现类间的通信，实现观察者模式；
 
-我们需要使用bind()函数绑定槽函数，返回函数对象；
+我们需要使用 bind()函数绑定槽函数，返回函数对象；
+
 ```cpp
 #include "boost/signals2.hpp"
 #include <iostream>
@@ -277,7 +279,6 @@ int main() {
     return 0;
 }
 ```
-
 
 ### 自动断开
 

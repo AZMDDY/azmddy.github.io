@@ -1,8 +1,6 @@
-# 解决git显示中文问题
+# 解决 git 显示中文问题
 
-> 在Linux环境下，可能会遇到git显示中文不正常的问题。
-
-
+> 在 Linux 环境下，可能会遇到 git 显示中文不正常的问题。
 
 ![image-20220228123901572](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/img/image-20220228123901572.png)
 

@@ -1,4 +1,4 @@
-# shell脚本获取进程pid
+# shell 脚本获取进程 pid
 
 ```Bash
 #!/bin/bash

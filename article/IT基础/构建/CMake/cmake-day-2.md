@@ -1,6 +1,6 @@
-# CMake Day 2 —— 指定C/C++的标准
+# CMake Day 2 —— 指定 C/C++的标准
 
-我们可以在CMake代码中设置正确的标志，以启动对特定C/C++标准的支持。最简单的是使用`CMAKE_CXX_STANDARD`变量。
+我们可以在 CMake 代码中设置正确的标志，以启动对特定 C/C++标准的支持。最简单的是使用`CMAKE_CXX_STANDARD`变量。
 
 **注意：要在`add_executable`之前，添加对`CMAKE_CXX_STANDARD`的声明。**
 

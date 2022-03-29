@@ -1,20 +1,16 @@
 title: ZhiBing's Blog
 lang: zh
 description: Look the world on the code.
+author: Zhi Bing Zheng
 
-repository: AZMDDY/azmddy.github.io
-## local method ##
-# theme: jekyll-rtd-theme
-
-## remote method ##
-remote_theme: AZMDDY/jekyll-rtd-theme
+theme: null
 
 # debug:
-#   compress: false
-#   dist: true
+#   compress: true
+#   dist: false
 #   shortcodes: true
 
-author: Zhi Bing Zheng
+repository: AZMDDY/azmddy.github.io
 
 google:
   gtm: GTM-NBRVMCF
@@ -29,16 +25,8 @@ highlighter: rouge
 kramdown:
   syntax_highlighter: rouge
 
-# sort
 readme_index:
   with_frontmatter: true
-
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - Makefile
-  - CNAME
-  - LICENSE
 
 plugins:
   - jekyll-default-layout
@@ -50,3 +38,15 @@ plugins:
   - jekyll-mentions
   - jekyll-gist
 
+exclude:
+  - Makefile
+  - CNAME
+  - LICENSE
+  - update.sh
+  - Gemfile
+  - Gemfile.lock
+  - requirements.txt
+  - node_modules
+  - package.json
+  - package-lock.json
+  - webpack.config.js

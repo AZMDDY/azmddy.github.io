@@ -1,8 +1,8 @@
-# Raspbian Buster Lite安装桌面
+# Raspbian Buster Lite 安装桌面
 
-在Raspbian Buster Lite上安装PIXEL桌面。
+在 Raspbian Buster Lite 上安装 PIXEL 桌面。
 
-安装以下软件包，重启，通过win10的远程桌面连接，可以连接树莓派的桌面。
+安装以下软件包，重启，通过 win10 的远程桌面连接，可以连接树莓派的桌面。
 
 ```shell
 sudo apt-get install -y python-sense-emu-doc realvnc-vnc-viewer

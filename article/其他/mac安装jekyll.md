@@ -1,12 +1,12 @@
-# mac安装jekyll
+# mac 安装 jekyll
 
-## 安装ruby
+## 安装 ruby
 
-mac自带的了一个ruby，但版本是`2.6.0`	,不满足安装要求。
+mac 自带的了一个 ruby，但版本是`2.6.0` ,不满足安装要求。
 
 ![image-20220308200855970](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/img/image-20220308200855970.png)
 
-所以我们需要自己安装一个ruby。
+所以我们需要自己安装一个 ruby。
 
 ```shell
 brew install ruby
@@ -14,7 +14,7 @@ brew install ruby
 
 ![image-20220308200949201](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/img/image-20220308200949201.png)
 
-这里也可看到提示，如果要使用新安装的ruby就需要执行：
+这里也可看到提示，如果要使用新安装的 ruby 就需要执行：
 
 ```shell
 echo 'export PATH="/opt/homebrew/opt/ruby/bin:$PATH"' >> ~/.zshrc
@@ -24,7 +24,7 @@ echo 'export PATH="/opt/homebrew/opt/ruby/bin:$PATH"' >> ~/.zshrc
 
 ![image-20220308201217074](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/img/image-20220308201217074.png)
 
-## 安装Jekyll
+## 安装 Jekyll
 
 ```shell
 gem install --user-install bundler jekyll
@@ -42,7 +42,7 @@ echo 'export PATH="$HOME/.gem/ruby/3.0.0/bin:$PATH"' >> ~/.zshrc
 echo 'export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"' >> ~/.zshrc
 ```
 
-重新打开终端，创建一个jekyll项目。
+重新打开终端，创建一个 jekyll 项目。
 
 ```shell
 jekyll new my-site
@@ -64,4 +64,4 @@ bundle add webrick
 
 ## 参考
 
-+ [Jekyll on macOS | Jekyll • Simple, blog-aware, static sites (jekyllrb.com)](https://jekyllrb.com/docs/installation/macos/)
+- [Jekyll on macOS | Jekyll • Simple, blog-aware, static sites (jekyllrb.com)](https://jekyllrb.com/docs/installation/macos/)

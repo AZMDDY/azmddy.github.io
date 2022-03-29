@@ -1,6 +1,6 @@
-# docker + nextcloud搭建私有云(Linux)
+# docker + nextcloud 搭建私有云(Linux)
 
-> 使用docker+nextcloud可以快速的搭建私有云盘。
+> 使用 docker+nextcloud 可以快速的搭建私有云盘。
 
 ## 安装
 
@@ -65,23 +65,23 @@ nextcloud
 
 1. 创建管理员用户
 2. 选择文件存储路径（保持默认，如果需要更改，请同时更改上面的容器映射路径）
-3. 数据库选择postgres，用户名:`postgres`（默认，如果需要更改，请创建用户）, 密码:`pgsql_pwd`, 数据库:`postgres`（默认，如果需要更改，请创建数据库）, IP地址:`ip:32456`
+3. 数据库选择 postgres，用户名:`postgres`（默认，如果需要更改，请创建用户）, 密码:`pgsql_pwd`, 数据库:`postgres`（默认，如果需要更改，请创建数据库）, IP 地址:`ip:32456`
 4. 安装完成
-5. 可以创建用户，设定配额，还可以进行创建群组，聊天，视频，共享等，功能是否的丰富(视频和共享需要使用https)。
+5. 可以创建用户，设定配额，还可以进行创建群组，聊天，视频，共享等，功能是否的丰富(视频和共享需要使用 https)。
 
 ## https
 
-对于nextcloud的用户间视频共享等功能需要使用https协议，所以需要在本地到服务器直接使用https协议。
+对于 nextcloud 的用户间视频共享等功能需要使用 https 协议，所以需要在本地到服务器直接使用 https 协议。
 
 使用`nginx`配置反向代理来完成。
 
-### 安装nignx
+### 安装 nignx
 
 ```bash
 sudo apt-get install nginx
 ```
 
-### 创建ssl证书
+### 创建 ssl 证书
 
 可以选择自己创建证书，也可以通过其他方式获取证书
 
@@ -117,11 +117,11 @@ server {
 }
 ```
 
-如果使用默认端口，即nextcloud容器映射端口到443端口，可以将80端口重定向到443端口。
+如果使用默认端口，即 nextcloud 容器映射端口到 443 端口，可以将 80 端口重定向到 443 端口。
 
 ## FAQ
 
-+ 遇到通过域名无法访问私有云时，需要修改`config/config.php`文件中的`trusted_domains`（/home/volume/hcloud/config/config.php）将域名加入其中。
+- 遇到通过域名无法访问私有云时，需要修改`config/config.php`文件中的`trusted_domains`（/home/volume/hcloud/config/config.php）将域名加入其中。
 
 ![image-20210221173535654](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/img/image-20210221173535654.png)
 

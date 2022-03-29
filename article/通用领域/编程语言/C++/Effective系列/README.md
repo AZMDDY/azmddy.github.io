@@ -2,7 +2,6 @@
 sort: 4
 ---
 
-# Effective系列
+# Effective 系列
 
 {% include list.liquid all=true %}
-

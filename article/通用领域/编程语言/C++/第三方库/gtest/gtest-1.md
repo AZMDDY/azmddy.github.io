@@ -4,11 +4,9 @@
 
 ## 初步使用
 
+下载构建好 GTest 之后，我们就可以开始在自己的项目中使用 GTest 了,首先我们需要在自己的工程中包含`#include"gtest/gtest.h"`，于此同时，我们在项目构建中需要链接 gtest 和 gtest_main 库以及头文件。pthread 库也应该包含到你的工程中，gtest 依赖于 pthread,这样我们就可以开始使用 GTest 了。
 
-
-下载构建好GTest之后，我们就可以开始在自己的项目中使用GTest了,首先我们需要在自己的工程中包含`#include"gtest/gtest.h"`，于此同时，我们在项目构建中需要链接gtest和gtest_main库以及头文件。pthread库也应该包含到你的工程中，gtest依赖于pthread,这样我们就可以开始使用GTest了。
-
-首先是初始化GTest;
+首先是初始化 GTest;
 
 ```cpp
 #include <iostream>
@@ -21,26 +19,25 @@ int main(int argc, char **argv) {
 }
 ```
 
-`testing::InitGoogleTest(&argc, argv);`：初始化GoogleTest;
+`testing::InitGoogleTest(&argc, argv);`：初始化 GoogleTest;
 
 执行`RUN_ALL_TESTS()`将会运行你定义了的测试;
 
 ## 基本的概念
 
-当使用GTest的时候，你去写一些断言来测试情况是否正确，断言的会产生三种结果：`success`,`nonfatal failure`和 `fatal failure`,当发生了一个（fatal failure）致命错误的时候，它会终止当前的程序，其他情况下，程序仍会正常运行。
+当使用 GTest 的时候，你去写一些断言来测试情况是否正确，断言的会产生三种结果：`success`,`nonfatal failure`和 `fatal failure`,当发生了一个（fatal failure）致命错误的时候，它会终止当前的程序，其他情况下，程序仍会正常运行。
 
 ## 断言（Assertions）
 
-GTest的断言是像函数调用一样的宏，当断言失败了，GTest在终端打印出断言所在源文件以及所在行数，并且会输出失败信息，你也可以提供一个自定义的错误信息，这个错误信息将在GTest产生的错误信息后面打印出来;
+GTest 的断言是像函数调用一样的宏，当断言失败了，GTest 在终端打印出断言所在源文件以及所在行数，并且会输出失败信息，你也可以提供一个自定义的错误信息，这个错误信息将在 GTest 产生的错误信息后面打印出来;
 
 ### 断言的前缀
 
-GTest有两种类型的断言，它们的区别在于前缀，一种是`ASSERT_*`。另一种是`EXPECT_*`;
+GTest 有两种类型的断言，它们的区别在于前缀，一种是`ASSERT_*`。另一种是`EXPECT_*`;
 
 `ASSERT_`前缀的断言产生的错误将是`fatal failure`，这个将会中断程序的执行，对于很大威胁的调试而言，使用这个类型的断言是很明智的，但是这个断言有可能导致程序申请的资源没有被释放，造成内存泄露。
 
 `EXPECT_`前缀的断言产生的错误是`non failure`，它并不会中断程序的执行，通常情况下可使用`EXPECT_*`是更好一点的，它能够一次性报告多个错误;
-
 
 ### 自定义错误信息的
 
@@ -88,4 +85,4 @@ two `string` objects, use `EXPECT_EQ`, `EXPECT_NE`, and etc instead.
 | `ASSERT_STRCASEEQ(str1, str2);` | `EXPECT_STRCASEEQ(str1, str2);` |  the two C strings have the same content, ignoring case  |
 | `ASSERT_STRCASENE(str1, str2);` | `EXPECT_STRCASENE(str1, str2);` | the two C strings have different contents, ignoring case |
 
-C风格的字符串适合使用以上断言，而对于String风格的字符串，`ASSERT_EQ`和`EXPECT_EQ`之类的都是可以用的。
+C 风格的字符串适合使用以上断言，而对于 String 风格的字符串，`ASSERT_EQ`和`EXPECT_EQ`之类的都是可以用的。

@@ -41,10 +41,10 @@ add_executable(demo main.cpp)
 add_library(add SHARED add.cpp)
 ```
 
-
 ## add_executable
 
 语法：
+
 ```text
 add_executable(<name> [WIN32] [MACOSX_BUNDLE]
                [EXCLUDE_FROM_ALL]
@@ -55,14 +55,15 @@ add_executable(<name> [WIN32] [MACOSX_BUNDLE]
 
 默认情况下，可执行文件将会在该项目的构建树目录中被创建。可以通过`CMAKE_RUNTIME_OUTPUT_DIRECTORY`来改变可执行文件的归档路径。
 
-+ CMAKE_RUNTIME_OUTPUT_DIRECTORY：是归档可执行文件到指定目录；
+- CMAKE_RUNTIME_OUTPUT_DIRECTORY：是归档可执行文件到指定目录；
 
-`WIN32`是指在Windows上使用WinMain入口点创建可执行文件。
-`MACOSX_BUNDLE`是指在macOS或IOS上构建的可执行文件。
+`WIN32`是指在 Windows 上使用 WinMain 入口点创建可执行文件。
+`MACOSX_BUNDLE`是指在 macOS 或 IOS 上构建的可执行文件。
 
 ## add_library
 
 语法：
+
 ```text
 add_library(<name> [STATIC | SHARED | MODULE]
             [EXCLUDE_FROM_ALL]
@@ -77,5 +78,5 @@ add_library(<name> [STATIC | SHARED | MODULE]
 
 默认情况下，库文件将会在该项目的构建树目录中被创建，例如：项目中需要将不同文件夹中的代码编译成库，构建目录中会生成对于的构建树，库文件就在对应的目录中。但是我们可以通过`CMAKE_ARCHIVE_OUTPUT_DIRECTORY`,`CMAKE_LIBRARY_OUTPUT_DIRECTORY`参数来改变库文件生成的路径。
 
-+ CMAKE_ARCHIVE_OUTPUT_DIRECTORY：是归档静态库到指定目录；
-+ CMAKE_LIBRARY_OUTPUT_DIRECTORY: 是归档动态库到指定目录；
+- CMAKE_ARCHIVE_OUTPUT_DIRECTORY：是归档静态库到指定目录；
+- CMAKE_LIBRARY_OUTPUT_DIRECTORY: 是归档动态库到指定目录；

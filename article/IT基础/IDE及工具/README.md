@@ -1,6 +1,7 @@
 ---
 sort: 3
 ---
-# IDE及工具
+
+# IDE 及工具
 
 {% include list.liquid all=true %}

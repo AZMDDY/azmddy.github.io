@@ -1,4 +1,4 @@
-# vscode开发go
+# vscode 开发 go
 
 【环境】：Linux, Go1.13
 
@@ -25,7 +25,6 @@ go env -w GOSUMDB="sum.golang.google.cn"
 
 ![](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/20201216202617.png)
 
-
 按`Ctrl+Shift+P`，输入`Go: Install/Update Tools`，勾选所有工具，点击`OK`下载。
 
 ![](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/20201216091902.png)
@@ -42,21 +41,21 @@ go env -w GOSUMDB="sum.golang.google.cn"
 
 ```json
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Run",
-            "type": "go",
-            "request": "launch",
-            "mode": "auto",
-            "program": "${workspaceFolder}/src/main.go", // 调试的文件路径
-            "env": {},          // 自定义环境变量
-            "args": ["example"] // 传递给程序的参数
-        }
-    ]
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run",
+      "type": "go",
+      "request": "launch",
+      "mode": "auto",
+      "program": "${workspaceFolder}/src/main.go", // 调试的文件路径
+      "env": {}, // 自定义环境变量
+      "args": ["example"] // 传递给程序的参数
+    }
+  ]
 }
 ```
 
@@ -69,42 +68,43 @@ go env -w GOSUMDB="sum.golang.google.cn"
 ## 其它配置
 
 setting.json
+
 ```json
 {
-    "go.toolsGopath": "/home/zzb/go",
-    "go.autocompleteUnimportedPackages": true,
-    "go.gocodePackageLookupMode": "go",
-    "go.gotoSymbol.includeImports": true,
-    "go.useCodeSnippetsOnFunctionSuggest": true,
-    "go.useCodeSnippetsOnFunctionSuggestWithoutType": true,
-    "go.docsTool": "guru"
+  "go.toolsGopath": "/home/zzb/go",
+  "go.autocompleteUnimportedPackages": true,
+  "go.gocodePackageLookupMode": "go",
+  "go.gotoSymbol.includeImports": true,
+  "go.useCodeSnippetsOnFunctionSuggest": true,
+  "go.useCodeSnippetsOnFunctionSuggestWithoutType": true,
+  "go.docsTool": "guru"
 }
 ```
 
 ## go modules
 
-1.开启go modules 功能
+1.开启 go modules 功能
 
 ```Bash
 go env -w GO111MODULE=auto
 # auto 则会根据当前目录下是否有 go.mod 文件来判断是否使用 modules 功能， off和on分别时关闭和开启。
 ```
 
-2.初始化module
+2.初始化 module
 
 ```Bash
 # 进入项目src目录
 cd ./godemo/src
 go mode init godemo
 ```
-由于GOPATH与go modules不能共存，所有go modules就不在项目的根目录中初始化。项目的`src`下会生成`go.mod`文件，此时文件中仅有项目名和go的版本号。
+
+由于 GOPATH 与 go modules 不能共存，所有 go modules 就不在项目的根目录中初始化。项目的`src`下会生成`go.mod`文件，此时文件中仅有项目名和 go 的版本号。
 
 ![](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/20201216215625.png)
 
-
 3.检查依赖
 
-例如，项目中使用了echo库。
+例如，项目中使用了 echo 库。
 
 ![](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/20201216220614.png)
 

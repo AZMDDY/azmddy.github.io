@@ -2,7 +2,7 @@
 sort: 1
 ---
 
-# 安装docker
+# 安装 docker
 
 【环境信息】: ubuntu20.04, amd64
 

@@ -1,8 +1,8 @@
-# 树莓派4设置静态IP
+# 树莓派 4 设置静态 IP
 
-树莓派4安装Ubuntu20.4后，设置静态IP。
+树莓派 4 安装 Ubuntu20.4 后，设置静态 IP。
 
-在Ubuntu20.4中需要用`NetPlan`去管理配置网络。
+在 Ubuntu20.4 中需要用`NetPlan`去管理配置网络。
 
 ## 查看网卡信息
 
@@ -12,7 +12,7 @@ sudo apt-get install net-tools
 ifconfig
 ```
 
-## 配置静态IP
+## 配置静态 IP
 
 ```shell
 sudo cp /etc/netplan/50-cloud-init.yaml /etc/netplan/50-cloud-init.yaml.bk

@@ -1,8 +1,6 @@
-# 使用CLion开发Qt
+# 使用 CLion 开发 Qt
 
-> 习惯使用CLion开发，其实IDE都无所谓，根本上还是怎么使用CMake + Qt。
-
-
+> 习惯使用 CLion 开发，其实 IDE 都无所谓，根本上还是怎么使用 CMake + Qt。
 
 基础的`CMakeLists.txt`如下：
 
@@ -35,7 +33,7 @@ target_link_libraries(${PRJECT_NAME}
 
 通过`find_package`找到自己要使用的库，并通过`target_link_libraries`链接。
 
-为了正确找到qt的库，需要设置`CMAKE_PREFIX_PATH`，CMake必须找到Qt的安装目录。
+为了正确找到 qt 的库，需要设置`CMAKE_PREFIX_PATH`，CMake 必须找到 Qt 的安装目录。
 
 源码如下：
 

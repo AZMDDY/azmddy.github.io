@@ -1,21 +1,21 @@
-# 搭建Git服务器
+# 搭建 Git 服务器
 
-在ubuntu18.04上搭建Git服务器。
+在 ubuntu18.04 上搭建 Git 服务器。
 
-## 安装Git
+## 安装 Git
 
 ```shell
 sudo apt-get install git openssl
 ```
 
-## 创建Git用户组和用户
+## 创建 Git 用户组和用户
 
 ```shell
 sudo groupadd git
 sudo useradd git -g git
 ```
 
-## 禁止Git用户Shell登录
+## 禁止 Git 用户 Shell 登录
 
 ```shell
 sudo vim /etc/passwd
@@ -37,7 +37,7 @@ sudo chmod 644 authorized_keys
 # 将自己本地的公钥复制到authorized_keys中去
 ```
 
-## 初始化Git空仓库
+## 初始化 Git 空仓库
 
 ```shell
 cd /home/git

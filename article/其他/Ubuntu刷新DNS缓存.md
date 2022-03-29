@@ -1,4 +1,4 @@
-# Ubuntu20.04 刷新DNS缓存
+# Ubuntu20.04 刷新 DNS 缓存
 
 ```bash
 # 刷新缓存

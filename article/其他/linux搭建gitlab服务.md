@@ -1,6 +1,6 @@
-# linux搭建gitlab服务
+# linux 搭建 gitlab 服务
 
-使用docker 搭建gitlab服务。
+使用 docker 搭建 gitlab 服务。
 
 ```shell
 docker pull gitlab/gitlab-ce

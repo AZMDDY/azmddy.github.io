@@ -4,9 +4,9 @@
 
 ## 整数的不同进制显示
 
-我们可以调用`hex(ios_base& _Iosbase)`,`oct(ios_base& _Iosbase)`和`dec(ios_base& _Iosbase)`函数对cout对象的计数系统格式状态分别设置为16进制数，8进制数和10进制数。完成设置后，程序将按照设置好的格式打印整数，直到格式状态发生改变为止。C++还提供了更便捷的控制符（`hex`,`oct`,`dec`）来控制输出，这两者的效果一致。
+我们可以调用`hex(ios_base& _Iosbase)`,`oct(ios_base& _Iosbase)`和`dec(ios_base& _Iosbase)`函数对 cout 对象的计数系统格式状态分别设置为 16 进制数，8 进制数和 10 进制数。完成设置后，程序将按照设置好的格式打印整数，直到格式状态发生改变为止。C++还提供了更便捷的控制符（`hex`,`oct`,`dec`）来控制输出，这两者的效果一致。
 
-对于不同的进制显示，我们有时候希望带上基数前缀输出，C++提供了这种实现。我们使用`cout.setf(ios_base::showbase);`这个函数让输出带上基数前缀（0,0x），我们使用`cout.setf(ios_base::uppercase);`这个函数让16进制输出时，使用大写字母。
+对于不同的进制显示，我们有时候希望带上基数前缀输出，C++提供了这种实现。我们使用`cout.setf(ios_base::showbase);`这个函数让输出带上基数前缀（0,0x），我们使用`cout.setf(ios_base::uppercase);`这个函数让 16 进制输出时，使用大写字母。
 具体用法见以下代码。
 
 ```cpp
@@ -16,17 +16,17 @@ int main()
 {
     hex(cout);
     cout << 14; //e
-    
+
     oct(cout); //16
     cout << 14;
-    
+
     dec(cout); //14
     cout << 14;
-    
+
     cout << hex << 14; //等价于第5,6行
     cout << oct << 14; //等价于第8,9行
     cout << dec << 14; //等价于第11,12行
-    
+
     cout.setf(ios_base::showbase); //输出带上基数前缀（0,0x）
     cout << 156 << endl; //0x9c
     cout.setf(ios_base::uppercase); //对于16进制输出，使用大写字母
@@ -75,12 +75,12 @@ int main()
     cout.width(12);
     cout.fill('*');
     cout << 12 << endl; //**********12（右对齐）
-    
+
     cout.setf(ios_base::left, ios_base::adjustfield); //使用左对齐
     cout.width(12);
     cout.fill('*');
     cout << 12 << endl; //12**********（左对齐）
-    
+
     cout.setf(ios_base::internal, ios_base::adjustfield); //符号或基数前缀左对齐，值右对齐
     cout.width(12);
     cout.fill('*');
@@ -92,7 +92,7 @@ int main()
 
 ## 显示正号
 
-正号的显示很简单，利用`setf(ios_base::showpos)`这个函数。这函数会一直生效，直到使用`unsetf(ios_base::showpos)`函数使之失效。注意：C++将16进制数和8进制数视作无符号。
+正号的显示很简单，利用`setf(ios_base::showpos)`这个函数。这函数会一直生效，直到使用`unsetf(ios_base::showpos)`函数使之失效。注意：C++将 16 进制数和 8 进制数视作无符号。
 
 ```cpp
 #include <iostream>
@@ -109,7 +109,8 @@ int main()
 ```
 
 ## 浮点数精度（默认模式）
-浮点数的精度在默认的输出模式下，它指的是显示的总位数。C++默认精度是6位，末尾的0不显示。我们可通过`precision()`函数设置精度。这里的设置将会一直生效，直到被重新设置。
+
+浮点数的精度在默认的输出模式下，它指的是显示的总位数。C++默认精度是 6 位，末尾的 0 不显示。我们可通过`precision()`函数设置精度。这里的设置将会一直生效，直到被重新设置。
 
 ```cpp
 #include <iostream>
@@ -126,7 +127,8 @@ int main()
 ```
 
 ## 浮点数精度（定点模式）
-浮点数的精度在定点模式下，它指的是小数点后面的位数。通过使用`setf(ios_base::fixed, ios_base::floatfield);`和`precision();`函数打印末尾的0。这里的设置将会一直生效，直到被重新设置。
+
+浮点数的精度在定点模式下，它指的是小数点后面的位数。通过使用`setf(ios_base::fixed, ios_base::floatfield);`和`precision();`函数打印末尾的 0。这里的设置将会一直生效，直到被重新设置。
 
 ```cpp
 #include <iostream>
@@ -143,7 +145,8 @@ int main()
 ```
 
 ## 浮点数精度（科学模式）
-浮点数的精度在科学模式下，它指的是小数点后面的位数。通过使用`setf(ios_base::scientific, ios_base::floatfield);`和`precision();`函数打印末尾的0。这里的设置将会一直生效，直到被重新设置。
+
+浮点数的精度在科学模式下，它指的是小数点后面的位数。通过使用`setf(ios_base::scientific, ios_base::floatfield);`和`precision();`函数打印末尾的 0。这里的设置将会一直生效，直到被重新设置。
 
 ```cpp
 #include <iostream>
@@ -163,9 +166,9 @@ int main()
 
 | 第一个参数           | 第二个参数            | 含义                           |
 | :------------------- | :-------------------- | :----------------------------- |
-| ios_base::dec        | ios_base::basefield   | 使用基数10                     |
-| ios_base::oct        | ios_base::basefield   | 使用基数8                      |
-| ios_base::hex        | ios_base::basefield   | 使用基数16                     |
+| ios_base::dec        | ios_base::basefield   | 使用基数 10                    |
+| ios_base::oct        | ios_base::basefield   | 使用基数 8                     |
+| ios_base::hex        | ios_base::basefield   | 使用基数 16                    |
 | ios_base::fixed      | ios_base::floatfield  | 使用定点计数法                 |
 | ios_base::scientific | ios_base::floatfield  | 使用科学计数法                 |
 | ios_base::left       | ios_base::adjustfield | 使用左对齐                     |
@@ -176,7 +179,7 @@ int main()
 
 ## 标准控制符
 
-使用`setf()`并不是进行格式化的，对用户最为友好的方法，C++提供了很多控制符，能够代用setf(),并自动提供正确的参数，前面使用过`dec`,`hex`和`oct`。
+使用`setf()`并不是进行格式化的，对用户最为友好的方法，C++提供了很多控制符，能够代用 setf(),并自动提供正确的参数，前面使用过`dec`,`hex`和`oct`。
 例如：`cout << left << fixed;`设置了左对齐和定点模式。
 
 | 控制符      | 调用                                             |
@@ -201,6 +204,7 @@ int main()
 | scientific  | setf(ios_base::scientific, ios_base::floatfield) |
 
 简单的应用：
+
 ```cpp
 #include <iostream>
 using namespace std;
@@ -209,16 +213,16 @@ int main()
 	cout << hex << showbase << 14 << endl;//0xe
 
 	cout << fixed << showpos << 12.22 << endl;//+12.220000
-	
+
 	system("pause");
 	return 0;
 }
 ```
 
-## 头文件iomanip
+## 头文件 iomanip
 
-使用iostream工具设置格式化输出有时候不太方便。C++在头文件ipmanip中提供了其他一些控制符，让我们使用变得更加方便。
-3个最常用的控制符分别为setprecision(),setfill()和setw()，它们分别用于设置精度，填充和字段宽度。
+使用 iostream 工具设置格式化输出有时候不太方便。C++在头文件 ipmanip 中提供了其他一些控制符，让我们使用变得更加方便。
+3 个最常用的控制符分别为 setprecision(),setfill()和 setw()，它们分别用于设置精度，填充和字段宽度。
 
 ```cpp
 #include <iostream>

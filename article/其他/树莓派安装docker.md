@@ -1,6 +1,6 @@
-# 树莓派安装docker
+# 树莓派安装 docker
 
-脚本安装docker
+脚本安装 docker
 
 ```shell
 # 树莓派官方系统(arm64)
@@ -25,7 +25,7 @@ sudo vim /etc/docker/daemon.json
 }
 ```
 
-## docker安装ubuntu
+## docker 安装 ubuntu
 
 ```shell
 # 拉取ubuntu镜像

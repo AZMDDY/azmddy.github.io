@@ -1,10 +1,10 @@
-# V2ray配置Linux局域网代理
+# V2ray 配置 Linux 局域网代理
 
-在Linux机器上配置v2ray，让局域网中所有机器通过这台机器科学爱国。
+在 Linux 机器上配置 v2ray，让局域网中所有机器通过这台机器科学爱国。
 
-我用的linux机器是树莓派4(官方arm64系统)。
+我用的 linux 机器是树莓派 4(官方 arm64 系统)。
 
-## 配置静态IP
+## 配置静态 IP
 
 ```shell
 sudo vim /etc/dhcpcd.conf
@@ -15,7 +15,7 @@ static routers=192.168.61.1 # 网关
 static domain_name_servers=192.168.61.1 114.114.114.114 # dns
 ```
 
-## 安装V2ray
+## 安装 V2ray
 
 ```shell
 sudo apt-get install unzip daemon
@@ -23,7 +23,7 @@ sudo apt-get install unzip daemon
 curl -L -s https://install.direct/go.sh -o v2ray_install.sh
 ```
 
-从github上下载安装包。[https://github.com/v2ray/v2ray-core/releases](https://github.com/v2ray/v2ray-core/releases)
+从 github 上下载安装包。[https://github.com/v2ray/v2ray-core/releases](https://github.com/v2ray/v2ray-core/releases)
 
 ```shell
 sudo bash v2ray_install.sh --local v2ray-linux-arm64.zip # 从本地文件安装
@@ -41,7 +41,6 @@ sudo bash v2ray_install.sh --local v2ray-linux-arm64.zip # 从本地文件安装
 更改注释中的`http代理端口`，`服务器地址或域名`，`服务器端口`。
 
 ```json
-
 {
   "policy": {
     "system": {
@@ -57,15 +56,12 @@ sudo bash v2ray_install.sh --local v2ray-linux-arm64.zip # 从本地文件安装
   "inbounds": [
     {
       "tag": "proxy",
-      "port": 55555,       // http代理端口
+      "port": 55555, // http代理端口
       "listen": "0.0.0.0", // 允许局域网中其它机器访问
-      "protocol": "http",  // http协议
+      "protocol": "http", // http协议
       "sniffing": {
         "enabled": true,
-        "destOverride": [
-          "http",
-          "tls"
-        ]
+        "destOverride": ["http", "tls"]
       },
       "settings": {
         "auth": "noauth",
@@ -99,8 +95,8 @@ sudo bash v2ray_install.sh --local v2ray-linux-arm64.zip # 从本地文件安装
       "settings": {
         "vnext": [
           {
-            "address": "server_address",  // 服务器地址或域名
-            "port": 12345,                // 服务器端口
+            "address": "server_address", // 服务器地址或域名
+            "port": 12345, // 服务器端口
             "users": [
               {
                 "id": "1b98c8d2-8963-e3b9-8es2-85afb4fd6w1b",
@@ -157,9 +153,7 @@ sudo bash v2ray_install.sh --local v2ray-linux-arm64.zip # 从本地文件安装
   "stats": {},
   "api": {
     "tag": "api",
-    "services": [
-      "StatsService"
-    ]
+    "services": ["StatsService"]
   },
   "dns": null,
   "routing": {
@@ -168,9 +162,7 @@ sudo bash v2ray_install.sh --local v2ray-linux-arm64.zip # 从本地文件安装
       {
         "type": "field",
         "port": null,
-        "inboundTag": [
-          "api"
-        ],
+        "inboundTag": ["api"],
         "outboundTag": "api",
         "ip": null,
         "domain": null
@@ -178,7 +170,6 @@ sudo bash v2ray_install.sh --local v2ray-linux-arm64.zip # 从本地文件安装
     ]
   }
 }
-
 ```
 
 ```shell

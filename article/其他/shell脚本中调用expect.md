@@ -1,19 +1,19 @@
-# shell脚本中调用expect
+# shell 脚本中调用 expect
 
-> expect是unix/linux系统中用来进行自动化控制和测试的软件工具。该工具利用伪终端包装其子进程，允许任意程序通过终端接入进行自动化控制。
+> expect 是 unix/linux 系统中用来进行自动化控制和测试的软件工具。该工具利用伪终端包装其子进程，允许任意程序通过终端接入进行自动化控制。
 
 首先安装`expect`，`sudo apt-get install expect`。
 
 介绍`expect`命令之前，先介绍几个和`expect`有关的命令：
 
-+ spawn: spawn命令可以启动一个脚本或程序，类似shell,ftp,telnet,ssh,scp等等;
-+ expect: 等待程序输出,并匹配这些输出的内容
-+ send: 发送一个回应给程序
-+ exp_continue: 继续匹配
-+ set: 定义变量
-+ puts: 输出变量
-+ exit: 退出expect命令
-+ interact: 运行你和程序进行交互
+- spawn: spawn 命令可以启动一个脚本或程序，类似 shell,ftp,telnet,ssh,scp 等等;
+- expect: 等待程序输出,并匹配这些输出的内容
+- send: 发送一个回应给程序
+- exp_continue: 继续匹配
+- set: 定义变量
+- puts: 输出变量
+- exit: 退出 expect 命令
+- interact: 运行你和程序进行交互
 
 ```shell
 # 设置命令执行的超时时间(s)
@@ -27,7 +27,7 @@ expect "password" { send "paaswd\n" }
 expect eof
 ```
 
-ssh自动登录实例：
+ssh 自动登录实例：
 
 ```shell
 # --------------------------------------------------------------------------- #
@@ -54,7 +54,7 @@ EOF
 }
 ```
 
-ssh自动登录并切换到root用户:
+ssh 自动登录并切换到 root 用户:
 
 ```shell
 user="user"
