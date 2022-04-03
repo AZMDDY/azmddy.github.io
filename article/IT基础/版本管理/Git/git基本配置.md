@@ -92,3 +92,19 @@ ssh-keygen -t rsa -C azmddy.c@gmail.com
 
 可以将公钥上传到代码平台，比如github，gitlab，gitee等等。这样就可以不需要输入密码上传和下载仓库代码。
 
+## 文本编辑器
+
+配置默认文本编辑器，当 Git 需要你输入信息时会调用它。 如果未配 置，Git 会使用操作系统默认的文本编辑器。
+
+```shell
+git config --global core.editor vim
+```
+
+## 检查配置信息
+
+如果想要检查你的配置，可以使用`git config --list`命令来列出所有Git当时能找到的配置。
+
+```shell
+git config --list
+```
+
