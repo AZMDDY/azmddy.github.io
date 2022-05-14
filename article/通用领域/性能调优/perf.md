@@ -1,0 +1,119 @@
+# perf —— Linux下的性能分析工具
+
+> 在对性能有明显要求的产品开发中经常需要使用到perf来分析热点函数，找出性能瓶颈，并做出性能优化。在产品迭代过程中，通常也会使用它来分析两个版本之间的性能差异，分析当前版本相对于上个版本是否出现明显的性能下降。
+
+
+
+## 安装
+
+### 方法一 —— 直接安装软件包
+
+`perf`工具位于`linux-tools-common`包中。我们可以直接安装，安装完成后，执行`perf`命令可能会提示还需要安装其他的软件包，按照提示安装即可。
+
+```shell
+sudo apt-get install linux-tools-common
+sudo apt-get install linux-tools-5.4.0-107-generic linux-cloud-tools-5.4.0-107-generic
+```
+
+
+
+![image-20220511175432024](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/img/image-20220511175432024.png)
+
+## 方法二 —— 源码编译
+
+其实生产环境中这种方式更为常用，在生产环境上系统都是精简过的，perf等工具都是不必要的，只有在开发的时候才需要使用perf工具，面对生产环境没有现成perf工具，也不能联网安装，只能将编译好的perf拷贝到环境上，或者在环境上离线安装配套的perf。
+
+需要根据内核版本和Linux的发行版本来获取源码，然后从源码构建perf。
+
++ 获取源码
+  + 源码获取地址：https://kernel.org/
+  + 内核版本：执行命令：`cat /proc/version`
+
+![image-20220511180900091](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/img/image-20220511180900091.png)
+
++ 我们可以去下载对应版本的内核源码：https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/snapshot/linux-5.4.107.tar.gz
++ 解压后，`cd tools/perf`
++ 执行`make`,如果提示错误，就按照提示去解决它们。`sudo apt-get install flex bison`，安装好提示缺少的包后，就编译成功了。
+
+![image-20220511182516686](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/img/image-20220511182516686.png)
+
+![image-20220511182625189](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/img/image-20220511182625189.png)
+
+![image-20220511182709379](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/img/image-20220511182709379.png)
+
++ 其实这个编译后也不是很好用，因为这个是链接的动态库，如果你想将编译好的perf二进制文件copy到其他环境上使用就需要将这些依赖的动态库都copy过去，所以我们可以修改一下编译选项，静态编译一下，然后就只用拷贝一个perf二进制文件就好了。
+
+  ```shell
+  cd tools/perf
+  vi Makefile.perf
+  # 定义 LDFLAGS=-static
+  make clean
+  make
+  ```
+
+  ![image-20220511184131518](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/img/image-20220511184131518.png)
+
+  ![image-20220511184200103](https://cdn.jsdelivr.net/gh/AZMDDY/imgs/img/image-20220511184200103.png)
+
+## 使用
+
+由于生产环境上运行的程序都是编译的时候strip过，我们不能直接去使用perf，如果直接使用，生成的火焰图就没有函数信息，不知道热点函数是谁，我们应该编译出带有调试信息的进程，也就是`not stripped`的进程。
+
+在准备好perf和`not stripped`的进程后，执行以下命令抓取热点：
+
+```shell
+# 获取正在运行的进程的pid
+ps -ef
+
+# 采样
+perf record -g -a -F 99 -- sleep 60 -p 4567 -o perf.data
+# -g 输出函数调用栈
+# -F 设置采样频率HZ
+# -a 记录所有CPU的事件
+# -- sleep 设置采样时间（s）
+# -p 设置记录的进程pid
+# -o 记录结果输出到指定文件
+
+# 将报告输出成可读的文件
+perf script -i perf.data > out.perf
+```
+
+我们还需要借助`FlameGraph`工具来生成火焰图。
+
+下载地址：https://github.com/brendangregg/FlameGraph.git
+
+这个直接下载就可以使用。
+
+```shell
+# 将生成的out.perf文件拷贝到FlameGraph项目中。
+./stackcollapse-perf.pl out.perf > out.folded
+./flamegraph.pl out.floded > out.svg
+```
+
+然后我们就可以使用浏览器打开`out.svg`火焰图了。
+
+火焰图的横向是函数执行时间，竖向是函数调用栈。通过这个我们可以看到在哪个调用栈的哪个函数消耗了太多cpu资源，找到这个优化点，提高性能。
+
+
+
+### 火焰图对比（红蓝差分火焰图）
+
+火焰图往往不是单独使用，经常是和上个版本进行对比，找出性能下降的点，然后将它优化掉，优化不了那就不是bug，就是特性！
+
+```shell
+./difffolded.pl out1.floded  out2.floded > diff.floded
+
+./flamegraph.pl --negate diff.floded > diff.svg
+```
+
+对于生成的差分火焰图，红色表示上升，蓝色表示下降。
+
+但实际发现对于新增的调用栈或删除的调用栈，差分火焰图上并不会显示出红色和蓝色，对于官方说法是让我们正反对比一下，这其实并不好观察。
+
+其实可以自己写个python脚本来实现，思路：直接读取svg文件，获取函数以及它的占用率，对比后生成csv或者excel文件。
+
+## 参考
+
++ https://perf.wiki.kernel.org/index.php/Tutorial#Introduction
++ https://www.brendangregg.com/perf.html
++ https://github.com/brendangregg/FlameGraph/blob/master/difffolded.pl
