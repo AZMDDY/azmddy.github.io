@@ -37,8 +37,8 @@
         {{- author -}}
     </a>
     {{ __.revision | default: "Revision" }}
-    <a class="text-gray" href="{{ docs.repository_url }}/commit/{{ docs.build_revision }}" title="{{ docs.build_revision }}" rel="noreferrer" target="_blank">
-        {{- docs.build_revision | slice: 0, 7 -}}
+    <a class="text-gray" href="https://beian.miit.gov.cn" title="粤ICP备2022062743号" rel="noreferrer" target="_blank">
+        粤ICP备2022062743号
     </a>
     <br>
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -84,7 +84,7 @@
 <!-- 动态显示网站运行时间 -->
 <script type="text/javascript" language="javascript">
     function setTime() {
-        var create_time = Math.round(new Date(Date.UTC(2020, 08, 30, 0, 0, 0)).getTime() / 1000);
+        var create_time = Math.round(new Date(Date.UTC(2022, 06, 01, 0, 0, 0)).getTime() / 1000);
         var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
         currentTime = secondToDate((timestamp - create_time));
         currentTimeHtml = '运行' + currentTime[0] + '年' +  currentTime[1] + '天' ;
